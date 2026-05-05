@@ -1,0 +1,3 @@
+CCI API: total=477, perPage=20, pages=24, param=limit
+CCI API: fetched 477 sermons total
+Spotify: skipped. Pass --spotify-id CLIENT_ID --spotify-secret CLIENT_SECRET to enable.
