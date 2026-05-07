@@ -3,7 +3,7 @@ name: Update CCI Sermons
 on:
   # Runs every Monday at 9am UTC (new sermons typically uploaded after Sunday service)
   schedule:
-    - cron: "0 9 * * 1"
+    - cron: "	0 9 * * 01,4"
   # Also runs every Thursday at 9am (midweek services)
   #   - cron: "0 9 * * 4"
   # Allows manual trigger from GitHub Actions tab
