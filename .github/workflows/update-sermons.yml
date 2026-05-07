@@ -27,7 +27,14 @@ jobs:
           node-version: 22
 
       - name: Run CCI sermon scraper
-        run: node cci-sermons-scraper.js
+        run: |
+          if [ -n "$YOUTUBE_API_KEY" ]; then
+            node cci-sermons-scraper.js --youtube-key "$YOUTUBE_API_KEY"
+          else
+            node cci-sermons-scraper.js
+          fi
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
       - name: Show summary
         run: |

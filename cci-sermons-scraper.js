@@ -122,15 +122,22 @@ async function main() {
   allSermons = mergeByTitle(allSermons, rssSermons);
   console.log(`  After RSS audio merge: ${allSermons.length} total sermons, ${allSermons.filter(s => s.audioUrl).length} with audio.\n`);
 
-  // 3. Optional Spotify
+  // 3. YouTube — Wednesday + Sunday + Special services
+  console.log("Step 3: Fetching from YouTube (@celebrationchurchng)...");
+  const ytSermons = await scrapeYouTube(args.youtubeKey, log);
+  const beforeYt = allSermons.length;
+  allSermons = mergeByTitle(allSermons, ytSermons);
+  console.log(`  Added ${allSermons.length - beforeYt} new videos from YouTube (${ytSermons.length} fetched).\n`);
+
+  // 4. Optional Spotify
   if (args.spotifyId && args.spotifySecret) {
-    console.log("Step 3: Fetching from Spotify...");
+    console.log("Step 4: Fetching from Spotify...");
     const spotifySermons = await scrapeSpotify(args.spotifyId, args.spotifySecret, log);
     allSermons = mergeByTitle(allSermons, spotifySermons);
     console.log(`  After Spotify merge: ${allSermons.length} total sermons.\n`);
   } else {
     log.push("Spotify: skipped. Pass --spotify-id CLIENT_ID --spotify-secret CLIENT_SECRET to enable.");
-    console.log("Step 3: Spotify skipped (pass --spotify-id and --spotify-secret to enable).\n");
+    console.log("Step 4: Spotify skipped.\n");
   }
 
   // Sort newest first
@@ -758,10 +765,123 @@ function slugify(str) {
 function parseArgs(argv) {
   const a = {};
   for (let i = 0; i < argv.length; i++) {
-    if (argv[i] === "--spotify-id" && argv[i + 1]) a.spotifyId = argv[++i];
+    if (argv[i] === "--spotify-id"     && argv[i + 1]) a.spotifyId     = argv[++i];
     if (argv[i] === "--spotify-secret" && argv[i + 1]) a.spotifySecret = argv[++i];
+    if (argv[i] === "--youtube-key"    && argv[i + 1]) a.youtubeKey    = argv[++i];
   }
   return a;
+}
+
+// ─── YOUTUBE ──────────────────────────────────────────────────────────────────
+
+const YT_CHANNEL_ID      = "UCiKEtpeOs6eAJjMvBRnry7g"; // @celebrationchurchng
+const YT_UPLOADS_PLAYLIST = "UUiKEtpeOs6eAJjMvBRnry7g"; // UC → UU for uploads playlist
+
+/**
+ * Scrape YouTube for ALL CCI videos (Sunday + Wednesday + Special).
+ * - Without API key: fetches the public RSS feed (last 15 videos only, free).
+ * - With --youtube-key: uses YouTube Data API v3 to get the full history.
+ */
+async function scrapeYouTube(youtubeKey, log) {
+  if (youtubeKey) {
+    console.log("  Using YouTube Data API v3 (full history)...");
+    return scrapeYouTubeApi(youtubeKey, log);
+  }
+  console.log("  No YouTube API key — fetching RSS feed (latest 15 videos only).");
+  console.log("  TIP: pass --youtube-key YOUR_KEY to get ALL Wednesday services.\n");
+  return scrapeYouTubeRss(log);
+}
+
+/** Public RSS feed — free, no key, but limited to the most recent 15 videos */
+async function scrapeYouTubeRss(log) {
+  const sermons = [];
+  try {
+    const url = `https://www.youtube.com/feeds/videos.xml?channel_id=${YT_CHANNEL_ID}`;
+    const xml = await fetchText(url);
+    const entryRegex = /<entry>([\s\S]*?)<\/entry>/gi;
+    let m;
+    while ((m = entryRegex.exec(xml)) !== null) {
+      const raw       = m[1];
+      const videoId   = (raw.match(/<yt:videoId>([^<]+)<\/yt:videoId>/) || [])[1] || "";
+      const title     = decodeXml((raw.match(/<title>([^<]+)<\/title>/) || [])[1] || "");
+      const published = (raw.match(/<published>([^<]+)<\/published>/) || [])[1] || "";
+      const desc      = decodeXml((raw.match(/<media:description>([^<]*)<\/media:description>/) || [])[1] || "");
+      if (!videoId || !title) continue;
+      sermons.push(normalizeYouTubeItem({ videoId, title, publishedAt: published, description: desc }));
+    }
+    log.push(`YouTube RSS: ${sermons.length} videos`);
+  } catch (err) {
+    log.push(`YouTube RSS: failed — ${err.message}`);
+  }
+  return sermons;
+}
+
+/** YouTube Data API v3 — requires a free API key, returns ALL videos with pagination */
+async function scrapeYouTubeApi(apiKey, log) {
+  const sermons = [];
+  let pageToken = "";
+  let page = 0;
+
+  do {
+    page++;
+    const url = `https://www.googleapis.com/youtube/v3/playlistItems`
+      + `?part=snippet&playlistId=${YT_UPLOADS_PLAYLIST}`
+      + `&maxResults=50&key=${apiKey}`
+      + (pageToken ? `&pageToken=${pageToken}` : "");
+
+    try {
+      const data = await fetchJson(url);
+      for (const item of (data.items || [])) {
+        const snip    = item.snippet || {};
+        const videoId = snip.resourceId?.videoId || "";
+        if (!videoId) continue;
+        sermons.push(normalizeYouTubeItem({
+          videoId,
+          title:       snip.title || "",
+          publishedAt: snip.publishedAt || "",
+          description: snip.description || "",
+          thumbnail:   snip.thumbnails?.high?.url || snip.thumbnails?.default?.url || "",
+        }));
+      }
+      pageToken = data.nextPageToken || "";
+      process.stdout.write(`\r  YouTube API: page ${page}, ${sermons.length} videos...`);
+    } catch (err) {
+      log.push(`YouTube API: page ${page} failed — ${err.message}`);
+      break;
+    }
+  } while (pageToken);
+
+  process.stdout.write("\n");
+  log.push(`YouTube API: ${sermons.length} videos total (${page} pages)`);
+  return sermons;
+}
+
+function normalizeYouTubeItem({ videoId, title, publishedAt, description, thumbnail }) {
+  const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+  // Detect service type from title
+  const titleLower = title.toLowerCase();
+  const isMidweek  = /mdwk|midweek|wednesday/i.test(titleLower);
+  const isSpecial  = /conference|festival|convention|crusade|retreat|summit|camp|deeper|apostolos|soli deo|elf europe/i.test(titleLower);
+  const serviceType = isMidweek ? "Wednesday Service" : isSpecial ? "Special Service" : "Sunday Service";
+
+  return {
+    source:      "youtube",
+    id:          videoId,
+    slug:        slugify(title),
+    title:       title.replace(/\s*[-–—]\s*(first|second|third|1st|2nd|3rd)\s*service/i, "").trim(),
+    speaker:     "Apostle Emmanuel Iren",
+    date:        publishedAt ? formatDate(publishedAt) : "",
+    audioUrl:    "",
+    youtubeUrl,
+    pageUrl:     youtubeUrl,
+    thumbnail:   thumbnail || `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+    duration:    "",
+    description: (description || "").slice(0, 500),
+    series:      serviceType,
+    tags:        [serviceType],
+    topics:      [],
+  };
 }
 
 main().catch((err) => { console.error("Fatal:", err); process.exitCode = 1; });

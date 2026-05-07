@@ -1,4 +1,5 @@
 CCI API: total=481, perPage=20, pages=25, param=limit
 CCI API: fetched 481 sermons total
 RSS: https://sermons-api.essantra.joincci.org/rss.xml — 481 items
+YouTube RSS: 15 videos
 Spotify: skipped. Pass --spotify-id CLIENT_ID --spotify-secret CLIENT_SECRET to enable.
