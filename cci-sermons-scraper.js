@@ -516,6 +516,13 @@ function sermonTitleKey(sermon) {
 // ─── HTML VIEWER ─────────────────────────────────────────────────────────────
 
 function buildHtml(allSermons, grouped) {
+  const totalByTopic = {};
+  for (const s of allSermons) for (const t of (s.topics || [])) totalByTopic[t] = (totalByTopic[t] || 0) + 1;
+
+  const groupOpts = TOPIC_GROUPS.map((g) =>
+    `<option value="${g.id}">${g.label} (${totalByTopic[g.id] || 0})</option>`
+  ).join("");
+
   const years = [...new Set(allSermons.map((s) => (s.date || "").slice(0, 4)).filter(Boolean))].sort().reverse();
 
   return `<!DOCTYPE html>
@@ -539,7 +546,7 @@ function buildHtml(allSermons, grouped) {
     h1{font-size:clamp(2rem,4vw,4.4rem);line-height:.95;margin:0;letter-spacing:0;font-weight:800;max-width:760px}
     header p{margin:12px 0 0;color:var(--muted);font-size:1rem;max-width:680px}
 
-    .controls{position:sticky;top:0;z-index:3;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;grid-template-columns:1.35fr repeat(3,minmax(130px,.75fr));gap:10px;margin:0 0 14px;box-shadow:var(--shadow)}
+    .controls{position:sticky;top:0;z-index:3;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;grid-template-columns:1.35fr repeat(4,minmax(130px,.75fr));gap:10px;margin:0 0 14px;box-shadow:var(--shadow)}
     .ctrl{display:flex;flex-direction:column;gap:5px;min-width:0}
     label{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#9f2b2b}
     input,select{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 11px;font:inherit;font-size:.92rem;background:#fff;color:var(--ink);outline:none}
@@ -559,6 +566,7 @@ function buildHtml(allSermons, grouped) {
     .card-desc{font-size:.9rem;color:#4f3d3d;line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;min-height:5.55em}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
     .tag{max-width:100%;padding:4px 8px;border-radius:7px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;overflow:hidden;text-overflow:ellipsis}
+    .tag-topic{background:#ffe7e7;color:#b00000}
     .tag-series{background:#f7f7f7;color:#5b1c1c;border:1px solid #eed0d0}
     .links{display:flex;gap:8px;flex-wrap:wrap;padding-top:2px}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:34px;padding:7px 11px;border-radius:8px;font-size:.82rem;font-weight:800;text-decoration:none;border:1px solid var(--line);color:var(--accent);background:#fff}
@@ -582,6 +590,13 @@ function buildHtml(allSermons, grouped) {
     <div class="ctrl">
       <label for="q">Search</label>
       <input id="q" type="search" placeholder="title, description...">
+    </div>
+    <div class="ctrl">
+      <label for="topicSel">Topic</label>
+      <select id="topicSel">
+        <option value="">All topics</option>
+        ${groupOpts}
+      </select>
     </div>
     <div class="ctrl">
       <label for="seriesSel">Series</label>
@@ -614,8 +629,10 @@ function buildHtml(allSermons, grouped) {
 
 <script>
   const sermons = ${JSON.stringify(allSermons)};
+  const GROUPS  = ${JSON.stringify(TOPIC_GROUPS.map((g) => ({ id: g.id, label: g.label })))};
 
   const q        = document.getElementById("q");
+  const topicSel = document.getElementById("topicSel");
   const seriesSel= document.getElementById("seriesSel");
   const yearSel  = document.getElementById("yearSel");
   const sortSel  = document.getElementById("sortSel");
@@ -631,13 +648,15 @@ function buildHtml(allSermons, grouped) {
 
   function render() {
     const sq = q.value.trim().toLowerCase();
+    const st = topicSel.value;
     const ss = seriesSel.value;
     const sy = yearSel.value;
     const so = sortSel.value;
 
     let filtered = sermons.filter((s) => {
-      const hay = [s.title, s.description, s.series, ...(s.tags||[])].filter(Boolean).join(" ").toLowerCase();
+      const hay = [s.title, s.description, s.series, ...(s.tags||[]), ...(s.topics||[])].filter(Boolean).join(" ").toLowerCase();
       if (sq && !hay.includes(sq)) return false;
+      if (st && !(s.topics||[]).includes(st)) return false;
       if (ss && s.series !== ss) return false;
       if (sy && !(s.date||"").startsWith(sy)) return false;
       return true;
@@ -657,6 +676,10 @@ function buildHtml(allSermons, grouped) {
     if (!filtered.length) { grid.innerHTML = '<div class="empty">No sermons match.</div>'; return; }
 
     grid.innerHTML = filtered.map((s) => {
+      const topicLabels = (s.topics||[]).map((tid) => {
+        const g = GROUPS.find(g => g.id === tid);
+        return g ? '<span class="tag tag-topic">' + esc(g.label) + '</span>' : "";
+      }).join("");
       const seriesTag = s.series ? '<span class="tag tag-series">' + esc(s.series) + '</span>' : "";
       const apiTags = (s.tags||[]).slice(0,3).map(t => '<span class="tag tag-series">' + esc(t) + '</span>').join("");
       const audioBtn = s.audioUrl ? '<a class="btn" href="' + esc(s.audioUrl) + '" target="_blank" rel="noreferrer">🎙 Listen</a>' : "";
@@ -674,7 +697,7 @@ function buildHtml(allSermons, grouped) {
           '<div class="card-title">' + esc(s.title||"Untitled") + '</div>' +
           (s.duration ? '<div class="card-meta">⏱ ' + esc(s.duration) + '</div>' : "") +
           (s.description ? '<div class="card-desc">' + esc(s.description) + '</div>' : "") +
-          '<div class="tags">' + seriesTag + apiTags + '</div>' +
+          '<div class="tags">' + seriesTag + topicLabels + apiTags + '</div>' +
           '<div class="links">' + audioBtn + ytBtn + '</div>' +
         '</div></article>';
     }).join("");
@@ -685,6 +708,7 @@ function buildHtml(allSermons, grouped) {
   }
 
   q.addEventListener("input", render);
+  topicSel.addEventListener("change", render);
   seriesSel.addEventListener("change", render);
   yearSel.addEventListener("change", render);
   sortSel.addEventListener("change", render);
