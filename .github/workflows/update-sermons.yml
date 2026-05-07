@@ -3,7 +3,7 @@ name: Update CCI Sermons
 on:
   # Runs every Monday at 9am UTC (new sermons typically uploaded after Sunday service)
   schedule:
-    - cron: "	0 9 * * 01,4"
+    - cron: "0 9 * * 1,4"
   # Also runs every Thursday at 9am (midweek services)
   #   - cron: "0 9 * * 4"
   # Allows manual trigger from GitHub Actions tab
@@ -11,6 +11,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-cci-sermons-main
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -20,6 +24,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull latest changes before scraping
+        run: git pull --ff-only origin main
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -50,15 +59,18 @@ jobs:
             "
           fi
 
-      - name: Pull latest changes before committing
-        run: git pull --rebase --autostash origin main
-
       - name: Commit updated sermon data
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: auto-update sermon library (${{ env.TODAY }})"
-          file_pattern: index.html cci-sermons-all.json cci-sermons-grouped.json cci-sermons-log.txt
-          commit_user_name: "CCI Sermons Bot"
-          commit_user_email: "actions@github.com"
-        env:
-          TODAY: ${{ github.run_id }}
+        run: |
+          git config user.name "CCI Sermons Bot"
+          git config user.email "actions@github.com"
+
+          git add index.html cci-sermons-all.json cci-sermons-grouped.json cci-sermons-log.txt
+
+          if git diff --cached --quiet; then
+            echo "No sermon changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: auto-update sermon library (${{ github.run_id }})"
+          git pull --rebase origin main
+          git push origin HEAD:main
