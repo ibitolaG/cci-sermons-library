@@ -1,8 +1,12 @@
 name: Update CCI Sermons
 
 on:
+  # Runs every Monday at 9am UTC (new sermons typically uploaded after Sunday service)
   schedule:
     - cron: "0 9 * * 1"
+  # Also runs every Thursday at 9am (midweek services)
+  #   - cron: "0 9 * * 4"
+  # Allows manual trigger from GitHub Actions tab
   workflow_dispatch:
 
 permissions:
@@ -11,19 +15,40 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Update sermon data
+      - name: Run CCI sermon scraper
         run: node cci-sermons-scraper.js
 
-      - name: Commit updates
+      - name: Show summary
+        run: |
+          echo "=== Scrape complete ==="
+          if [ -f cci-sermons-all.json ]; then
+            echo "Sermons in library: $(node -e "console.log(require('./cci-sermons-all.json').length)")"
+          fi
+          if [ -f cci-sermons-grouped.json ]; then
+            echo "Topic groups:"
+            node -e "
+              const g = require('./cci-sermons-grouped.json');
+              g.forEach(grp => console.log('  ' + grp.label + ': ' + grp.sermons.length));
+            "
+          fi
+
+      - name: Commit updated sermon data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Update sermon data
+          commit_message: "chore: auto-update sermon library (${{ env.TODAY }})"
           file_pattern: index.html cci-sermons-all.json cci-sermons-grouped.json cci-sermons-log.txt
+          commit_user_name: "CCI Sermons Bot"
+          commit_user_email: "actions@github.com"
+        env:
+          TODAY: ${{ github.run_id }}

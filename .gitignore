@@ -1,0 +1,12 @@
+# Windows
+run-scraper.bat
+Thumbs.db
+Desktop.ini
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Old output file names
+cci-sermons.json
+cci-sermons.html

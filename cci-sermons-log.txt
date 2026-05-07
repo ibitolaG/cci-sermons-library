@@ -1,3 +1,4 @@
-CCI API: total=477, perPage=20, pages=24, param=limit
-CCI API: fetched 477 sermons total
+CCI API: total=481, perPage=20, pages=25, param=limit
+CCI API: fetched 481 sermons total
+RSS: https://sermons-api.essantra.joincci.org/rss.xml — 481 items
 Spotify: skipped. Pass --spotify-id CLIENT_ID --spotify-secret CLIENT_SECRET to enable.
