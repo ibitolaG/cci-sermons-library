@@ -439,33 +439,66 @@ function buildGroups(sermons) {
 }
 
 function mergeByTitle(primary, secondary) {
-  const byKey = new Map();
+  const byKey    = new Map(); // slug key → sermon
+  const byYtId   = new Map(); // youtube video ID → sermon
+  const byDateTitle = new Map(); // "date|first-4-words" → sermon (catches 1st/2nd service dupes)
+
   for (const sermon of primary) {
     byKey.set(sermonSlugKey(sermon), sermon);
     byKey.set(sermonTitleKey(sermon), sermon);
+    if (sermon.id) byYtId.set(sermon.id, sermon);
+    const dtKey = dateTitleKey(sermon);
+    if (dtKey) byDateTitle.set(dtKey, sermon);
   }
+
   const additions = [];
 
   for (const candidate of secondary) {
-    const key = sermonSlugKey(candidate);
-    const titleKey = sermonTitleKey(candidate);
-    const existing = byKey.get(key);
-    const titleMatch = byKey.get(titleKey);
-    const match = existing || titleMatch;
-    if (!match) {
-      additions.push(candidate);
-      byKey.set(key, candidate);
-      byKey.set(titleKey, candidate);
+    // 1. Exact YouTube video ID match — skip duplicate, but enrich existing entry
+    if (candidate.id && byYtId.has(candidate.id)) {
+      const match = byYtId.get(candidate.id);
+      enrichEntry(match, candidate);
       continue;
     }
 
-    if (!match.audioUrl && candidate.audioUrl) match.audioUrl = candidate.audioUrl;
-    if (!match.duration && candidate.duration) match.duration = candidate.duration;
-    if (!match.thumbnail && candidate.thumbnail) match.thumbnail = candidate.thumbnail;
-    if (!match.description && candidate.description) match.description = candidate.description;
+    // 2. Slug / title match
+    const match = byKey.get(sermonSlugKey(candidate)) || byKey.get(sermonTitleKey(candidate));
+    if (match) {
+      enrichEntry(match, candidate);
+      continue;
+    }
+
+    // 3. Same date + first 4 title words — catches "The Ultimate Search" first vs second service
+    const dtKey = dateTitleKey(candidate);
+    if (dtKey && byDateTitle.has(dtKey)) {
+      const match2 = byDateTitle.get(dtKey);
+      enrichEntry(match2, candidate);
+      continue;
+    }
+
+    // Not a duplicate — add it
+    additions.push(candidate);
+    byKey.set(sermonSlugKey(candidate), candidate);
+    byKey.set(sermonTitleKey(candidate), candidate);
+    if (candidate.id) byYtId.set(candidate.id, candidate);
+    if (dtKey) byDateTitle.set(dtKey, candidate);
   }
 
   return [...primary, ...additions];
+}
+
+function enrichEntry(existing, candidate) {
+  if (!existing.audioUrl   && candidate.audioUrl)   existing.audioUrl   = candidate.audioUrl;
+  if (!existing.youtubeUrl && candidate.youtubeUrl) existing.youtubeUrl = candidate.youtubeUrl;
+  if (!existing.duration   && candidate.duration)   existing.duration   = candidate.duration;
+  if (!existing.thumbnail  && candidate.thumbnail)  existing.thumbnail  = candidate.thumbnail;
+  if (!existing.description && candidate.description) existing.description = candidate.description;
+}
+
+function dateTitleKey(sermon) {
+  if (!sermon.date) return null;
+  const words = (sermon.title || "").toLowerCase().split(/\s+/).slice(0, 4).join(" ");
+  return `${sermon.date}|${words}`;
 }
 
 function sermonSlugKey(sermon) {
@@ -774,21 +807,26 @@ function parseArgs(argv) {
 
 // ─── YOUTUBE ──────────────────────────────────────────────────────────────────
 
-const YT_CHANNEL_ID      = "UCiKEtpeOs6eAJjMvBRnry7g"; // @celebrationchurchng
+const YT_CHANNEL_ID       = "UCiKEtpeOs6eAJjMvBRnry7g"; // @celebrationchurchng
 const YT_UPLOADS_PLAYLIST = "UUiKEtpeOs6eAJjMvBRnry7g"; // UC → UU for uploads playlist
 
 /**
  * Scrape YouTube for ALL CCI videos (Sunday + Wednesday + Special).
- * - Without API key: fetches the public RSS feed (last 15 videos only, free).
- * - With --youtube-key: uses YouTube Data API v3 to get the full history.
+ * - With --youtube-key: YouTube Data API v3 full history, falls back to RSS if it fails.
+ * - Without key: public RSS feed only (last 15 videos).
  */
 async function scrapeYouTube(youtubeKey, log) {
   if (youtubeKey) {
     console.log("  Using YouTube Data API v3 (full history)...");
-    return scrapeYouTubeApi(youtubeKey, log);
+    const apiResults = await scrapeYouTubeApi(youtubeKey, log);
+    if (apiResults.length > 0) return apiResults;
+    // API returned 0 — key probably missing YouTube Data API v3 permission; fall back to RSS
+    console.log("  ⚠️  YouTube API returned 0 results — falling back to RSS (latest 15).");
+    log.push("YouTube API: returned 0 — possible cause: YouTube Data API v3 not enabled for this key. Falling back to RSS.");
+    return scrapeYouTubeRss(log);
   }
   console.log("  No YouTube API key — fetching RSS feed (latest 15 videos only).");
-  console.log("  TIP: pass --youtube-key YOUR_KEY to get ALL Wednesday services.\n");
+  console.log("  TIP: Add YOUTUBE_API_KEY to GitHub Secrets to get the full history.\n");
   return scrapeYouTubeRss(log);
 }
 
@@ -831,6 +869,11 @@ async function scrapeYouTubeApi(apiKey, log) {
 
     try {
       const data = await fetchJson(url);
+      if (data.error) {
+        log.push(`YouTube API: error — ${data.error.message} (code ${data.error.code})`);
+        console.log(`  ⚠️  YouTube API error: ${data.error.message}`);
+        break;
+      }
       for (const item of (data.items || [])) {
         const snip    = item.snippet || {};
         const videoId = snip.resourceId?.videoId || "";
@@ -856,20 +899,38 @@ async function scrapeYouTubeApi(apiKey, log) {
   return sermons;
 }
 
-function normalizeYouTubeItem({ videoId, title, publishedAt, description, thumbnail }) {
-  const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+/**
+ * Clean a raw YouTube title like:
+ *   "ENEMIES OF PURPOSE | MDWK SERVICE | 6TH MAY 2026 | CELEBRATION CHURCH INT'L"
+ * into just:
+ *   "Enemies of Purpose"
+ */
+function cleanYouTubeTitle(raw) {
+  // Split on pipe or em-dash and take the first segment
+  let clean = raw.split(/\s*[|—]\s*/)[0].trim();
+  // Remove trailing service/date noise: "- First Service", "- Sunday Service" etc
+  clean = clean.replace(/\s*[-–]\s*(first|second|third|1st|2nd|3rd|sunday|mdwk|midweek)\s*service\s*$/i, "").trim();
+  // Title-case (uppercase the first letter of each word)
+  return clean
+    .toLowerCase()
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
 
-  // Detect service type from title
-  const titleLower = title.toLowerCase();
-  const isMidweek  = /mdwk|midweek|wednesday/i.test(titleLower);
-  const isSpecial  = /conference|festival|convention|crusade|retreat|summit|camp|deeper|apostolos|soli deo|elf europe/i.test(titleLower);
+function normalizeYouTubeItem({ videoId, title, publishedAt, description, thumbnail }) {
+  const youtubeUrl  = `https://www.youtube.com/watch?v=${videoId}`;
+  const cleanTitle  = cleanYouTubeTitle(title);
+
+  // Detect service type from the ORIGINAL raw title (has the service label in it)
+  const isMidweek  = /mdwk|midweek|wednesday/i.test(title);
+  const isSpecial  = /\b(conference|festival|elf|crusade|retreat|summit|camp|deeper|apostolos|soli deo)\b/i.test(title);
   const serviceType = isMidweek ? "Wednesday Service" : isSpecial ? "Special Service" : "Sunday Service";
 
   return {
     source:      "youtube",
     id:          videoId,
-    slug:        slugify(title),
-    title:       title.replace(/\s*[-–—]\s*(first|second|third|1st|2nd|3rd)\s*service/i, "").trim(),
+    slug:        slugify(cleanTitle),
+    title:       cleanTitle,
+    rawYtTitle:  title,            // keep original for dedup reference
     speaker:     "Apostle Emmanuel Iren",
     date:        publishedAt ? formatDate(publishedAt) : "",
     audioUrl:    "",
