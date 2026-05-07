@@ -19,7 +19,7 @@
     h1{font-size:clamp(2rem,4vw,4.4rem);line-height:.95;margin:0;letter-spacing:0;font-weight:800;max-width:760px}
     header p{margin:12px 0 0;color:var(--muted);font-size:1rem;max-width:680px}
 
-    .controls{position:sticky;top:0;z-index:3;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;grid-template-columns:1.35fr repeat(3,minmax(150px,.75fr));gap:10px;margin:0 0 14px;box-shadow:var(--shadow)}
+    .controls{position:sticky;top:0;z-index:3;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;grid-template-columns:1.35fr repeat(4,minmax(130px,.75fr));gap:10px;margin:0 0 14px;box-shadow:var(--shadow)}
     .ctrl{display:flex;flex-direction:column;gap:5px;min-width:0}
     label{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#9f2b2b}
     input,select{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 11px;font:inherit;font-size:.92rem;background:#fff;color:var(--ink);outline:none}
@@ -30,10 +30,10 @@
 
     .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 10px 28px rgba(176,0,0,.05);display:flex;flex-direction:column;gap:12px;min-height:260px;overflow:hidden}
     .thumb,.thumb-placeholder{display:none}
-    .card-body{display:flex;flex-direction:column;gap:12px;min-height:100%;flex:1}
-    .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-    .card-kicker{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .card-date{font-size:.78rem;color:var(--muted);font-weight:700;white-space:nowrap}
+    .card-body{display:flex;flex-direction:column;gap:8px;min-height:100%;flex:1}
+    .card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:2px}
+    .card-kicker{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+    .card-date{font-size:.78rem;color:var(--muted);font-weight:700;white-space:nowrap;background:#fff0f0;padding:2px 8px;border-radius:6px}
     .card-title{font-size:1.18rem;line-height:1.18;font-weight:800;margin:0;letter-spacing:0}
     .card-meta{font-size:.86rem;color:var(--muted);font-weight:600}
     .card-desc{font-size:.9rem;color:#4f3d3d;line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;min-height:5.55em}
@@ -51,7 +51,7 @@
     details{margin-top:22px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 16px}
     summary{cursor:pointer;font-weight:800;color:var(--accent);font-size:.9rem}
     .log{margin:10px 0 0;padding-left:18px;font-size:.84rem;color:var(--muted);line-height:1.75}
-    @media(max-width:860px){.controls{position:static;grid-template-columns:1fr 1fr}.ctrl:first-child{grid-column:1/-1}}
+    @media(max-width:960px){.controls{position:static;grid-template-columns:1fr 1fr}.ctrl:first-child{grid-column:1/-1}}
     @media(max-width:560px){.shell{width:min(100% - 22px,1180px);padding-top:18px}.controls,.grid{grid-template-columns:1fr}h1{font-size:2.15rem}.card{min-height:0}}
   </style>
 </head>
@@ -89,6 +89,14 @@
         <option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option>
       </select>
     </div>
+    <div class="ctrl">
+      <label for="sortSel">Sort by</label>
+      <select id="sortSel">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="title">Title A–Z</option>
+      </select>
+    </div>
   </div>
 
   <p class="count-line" id="countLine">Showing 482 sermons</p>
@@ -111,16 +119,25 @@
   const topicSel = document.getElementById("topicSel");
   const seriesSel= document.getElementById("seriesSel");
   const yearSel  = document.getElementById("yearSel");
+  const sortSel  = document.getElementById("sortSel");
   const grid     = document.getElementById("grid");
   const countLine= document.getElementById("countLine");
+
+  function fmtDate(d) {
+    if (!d) return "";
+    const dt = new Date(d);
+    if (isNaN(dt)) return d;
+    return dt.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  }
 
   function render() {
     const sq = q.value.trim().toLowerCase();
     const st = topicSel.value;
     const ss = seriesSel.value;
     const sy = yearSel.value;
+    const so = sortSel.value;
 
-    const filtered = sermons.filter((s) => {
+    let filtered = sermons.filter((s) => {
       const hay = [s.title, s.description, s.series, ...(s.tags||[])].filter(Boolean).join(" ").toLowerCase();
       if (sq && !hay.includes(sq)) return false;
       if (st === "__none__" && s.topics && s.topics.length > 0) return false;
@@ -130,30 +147,43 @@
       return true;
     });
 
+    // Always sort explicitly so newest/oldest is reliable
+    if (so === "oldest") {
+      filtered.sort((a, b) => (a.date||"").localeCompare(b.date||""));
+    } else if (so === "title") {
+      filtered.sort((a, b) => (a.title||"").localeCompare(b.title||""));
+    } else {
+      // Default: newest first
+      filtered.sort((a, b) => (b.date||"").localeCompare(a.date||""));
+    }
+
     countLine.textContent = "Showing " + filtered.length + " sermon" + (filtered.length !== 1 ? "s" : "");
     if (!filtered.length) { grid.innerHTML = '<div class="empty">No sermons match.</div>'; return; }
 
     grid.innerHTML = filtered.map((s) => {
-      const meta = [s.speaker, s.date, s.duration].filter(Boolean).join(" · ");
       const topicLabels = (s.topics||[]).map((tid) => {
         const g = GROUPS.find(g => g.id === tid);
         return g ? '<span class="tag tag-topic">' + esc(g.label) + '</span>' : "";
       }).join("");
       const seriesTag = s.series ? '<span class="tag tag-series">' + esc(s.series) + '</span>' : "";
-      const apiTags = (s.tags||[]).slice(0,4).map(t => '<span class="tag tag-series">' + esc(t) + '</span>').join("");
-      const audioBtn = s.audioUrl ? '<a class="btn" href="' + esc(s.audioUrl) + '" target="_blank" rel="noreferrer">Podcast audio</a>' : "";
+      const apiTags = (s.tags||[]).slice(0,3).map(t => '<span class="tag tag-series">' + esc(t) + '</span>').join("");
+      const audioBtn = s.audioUrl ? '<a class="btn" href="' + esc(s.audioUrl) + '" target="_blank" rel="noreferrer">🎙 Listen</a>' : "";
       const ytBtn    = s.youtubeUrl ? '<a class="btn btn-yt" href="' + esc(s.youtubeUrl) + '" target="_blank" rel="noreferrer">▶ YouTube</a>' : "";
-      const pageBtn  = "";
+      const niceDateStr = fmtDate(s.date);
       const img = s.thumbnail
         ? '<img class="thumb" src="' + esc(s.thumbnail) + '" alt="" loading="lazy" onerror="this.style.display=&quot;none&quot;">'
         : '<div class="thumb-placeholder">🎙</div>';
       return '<article class="card">' + img +
         '<div class="card-body">' +
+          '<div class="card-top">' +
+            '<span class="card-kicker">' + esc(s.series || s.speaker || "CCI") + '</span>' +
+            (niceDateStr ? '<span class="card-date">📅 ' + esc(niceDateStr) + '</span>' : '') +
+          '</div>' +
           '<div class="card-title">' + esc(s.title||"Untitled") + '</div>' +
-          (meta ? '<div class="card-meta">' + esc(meta) + '</div>' : "") +
+          (s.duration ? '<div class="card-meta">⏱ ' + esc(s.duration) + '</div>' : "") +
           (s.description ? '<div class="card-desc">' + esc(s.description) + '</div>' : "") +
           '<div class="tags">' + seriesTag + topicLabels + apiTags + '</div>' +
-          '<div class="links">' + audioBtn + ytBtn + pageBtn + '</div>' +
+          '<div class="links">' + audioBtn + ytBtn + '</div>' +
         '</div></article>';
     }).join("");
   }
@@ -166,6 +196,7 @@
   topicSel.addEventListener("change", render);
   seriesSel.addEventListener("change", render);
   yearSel.addEventListener("change", render);
+  sortSel.addEventListener("change", render);
   render();
 </script>
 </body>
