@@ -1,21 +1,42 @@
 [
   {
     "source": "youtube",
-    "id": "CDvZartf2zo",
+    "id": "rZwXb6dpod8",
+    "slug": "the-original",
+    "title": "The Original",
+    "rawYtTitle": "THE ORIGINAL | SUNDAY SERVICE | SECOND SERVICE | 10TH MAY 2026 | CELEBRATION CHURCH INT'L",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-05-10",
+    "audioUrl": "",
+    "youtubeUrl": "https://www.youtube.com/watch?v=rZwXb6dpod8",
+    "pageUrl": "https://www.youtube.com/watch?v=rZwXb6dpod8",
+    "thumbnail": "https://i.ytimg.com/vi/rZwXb6dpod8/hqdefault.jpg",
+    "duration": "",
+    "description": "00:00:00 - 00:17:46 | PRE SERVICE\n00:17:46 - 00:20:47 | OPENING PRAYER\n00:20:47 - 00:36:34 | CCW MINISTRATION\n00:36:34 - 00:53:57 | PRAYER AND CONFESSION\n00:53:57 - 01:02:11 | CHECK IN AND TESTIMONIES\n01:02:11 - 01:13:09 | CCW MINISTRATION\n01:13:09 - 02:31:24 | SERMON\n02:31:24 - 02:40:00 | GIVING AND ANNOUNCEMENT\n02:40:00 - 02:42:22 | ANNOUNCEMENT AND BENEDICTION\n\n\nLIKE, COMMENT, and SUBSCRIBE for more powerful content from CCI campuses around the world.\n\n🌐 Stay Connected with Us:\nWebsite: http",
+    "series": "Sunday Service",
+    "tags": [
+      "Sunday Service"
+    ],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
+    "id": "69fd1ce7f8a613c49f15fb11",
     "slug": "enemies-of-purpose",
     "title": "Enemies Of Purpose",
-    "rawYtTitle": "ENEMIES OF PURPOSE | MDWK SERVICE | 6TH MAY 2026 | CELEBRATION CHURCH INT'L",
     "speaker": "Apostle Emmanuel Iren",
     "date": "2026-05-06",
-    "audioUrl": "",
-    "youtubeUrl": "https://www.youtube.com/watch?v=CDvZartf2zo",
-    "pageUrl": "https://www.youtube.com/watch?v=CDvZartf2zo",
-    "thumbnail": "https://i.ytimg.com/vi/CDvZartf2zo/hqdefault.jpg",
-    "duration": "",
-    "description": "LIKE, COMMENT, and SUBSCRIBE for more powerful content from CCI campuses around the world.\n\n🌐 Stay Connected with Us:\nWebsite: https://joinccing.org\nInstagram: https://www.instagram.com/cci_global\nTwitter: https://twitter.com/cci__global\nFacebook: https://www.facebook.com/CelebrationChurchIntl/\n\nJoin our daily devotion at 6AM, 12NOON & 8PM (WAT):\nhttp://bit.ly/Triumph30Live",
-    "series": "Wednesday Service",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/enemies-of-purpose/enemies-of-purpose.mp3",
+    "youtubeUrl": "https://youtu.be/CDvZartf2zo?t=3927",
+    "pageUrl": "https://sermons.joincci.org/sermons/enemies-of-purpose",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/enemies-of-purpose/enemies-of-purpose.jpg",
+    "duration": "1Hr 2Mins",
+    "description": "Apostle taught us how to stand strong in the face of challenges, knowing that what we carry is priceless. And if the enemy fights it so hard, then it should tell us just how valuable it is. To live a life of purpose, there must be areas where you have purposed in your heart to do God’s will. 🔥 As Christians, you cannot love God without a God-esteem.✨ He shared a powerful analogy on why we shouldn’t judge God’s faithfulness by short-term situations. Even when we don’t understand what God is doing, we must learn to trust Him. This is the right thing to do in purpose…💃🏾🔥✨",
+    "series": "Purpose",
     "tags": [
-      "Wednesday Service"
+      "purpose",
+      "mdwk",
+      "iren"
     ],
     "topics": []
   },
@@ -104,6 +125,25 @@
   },
   {
     "source": "cci-api",
+    "id": "69fba477f8a613c49f15bdb8",
+    "slug": "3-kinds-of-life",
+    "title": "3 Kinds Of Life",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-04-25",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/3-kinds-of-life/3-kinds-of-life.mp3",
+    "youtubeUrl": "https://youtu.be/RbQ55NF6kv8?t=6049",
+    "pageUrl": "https://sermons.joincci.org/sermons/3-kinds-of-life",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/3-kinds-of-life/3-kinds-of-life.jpg",
+    "duration": "1Hr 9Mins",
+    "description": "Apostle Taught on 3 Kinds Of Life at Endless Life Festival Europe",
+    "series": "ELF",
+    "tags": [
+      "elf"
+    ],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
     "id": "69fb55d4100cfcbed45e7845",
     "slug": "the-utter-helplessness-of-man-elf-europe",
     "title": "The Utter Helplessness of Man - ELF Europe",
@@ -119,25 +159,6 @@
     "tags": [
       "elf",
       "pstirensaid"
-    ],
-    "topics": []
-  },
-  {
-    "source": "cci-api",
-    "id": "69fba477f8a613c49f15bdb8",
-    "slug": "3-kinds-of-life",
-    "title": "3 Kinds Of Life",
-    "speaker": "Apostle Emmanuel Iren",
-    "date": "2026-04-25",
-    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/3-kinds-of-life/3-kinds-of-life.mp3",
-    "youtubeUrl": "https://youtu.be/RbQ55NF6kv8?t=6049",
-    "pageUrl": "https://sermons.joincci.org/sermons/3-kinds-of-life",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/3-kinds-of-life/3-kinds-of-life.jpg",
-    "duration": "1Hr 9Mins",
-    "description": "Apostle Taught on 3 Kinds Of Life at Endless Life Festival Europe",
-    "series": "ELF",
-    "tags": [
-      "elf"
     ],
     "topics": []
   },
@@ -215,6 +236,46 @@
     "topics": [
       "prophecy"
     ]
+  },
+  {
+    "source": "cci-api",
+    "id": "69fe1b94f8a613c49f161732",
+    "slug": "faith-conference-portharcourt-day-2",
+    "title": "Faith Conference Portharcourt - Day 2",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-04-11",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/faith-conference-portharcourt-day-2/faith-conference-portharcourt-day-2.mp3",
+    "youtubeUrl": "https://youtu.be/0EQVluRaYE8?t=7178",
+    "pageUrl": "https://sermons.joincci.org/sermons/faith-conference-portharcourt-day-2",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/faith-conference-portharcourt-day-2/faith-conference-portharcourt-day-2.jpg",
+    "duration": "1Hr 3Mins",
+    "description": "Apostle preaching at Faith Conference Portharcourt",
+    "series": "Faith Conference",
+    "tags": [
+      "fath conference",
+      "iren"
+    ],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
+    "id": "69fe1a2bf8a613c49f1616fa",
+    "slug": "faith-conference-portharcourt-day-1",
+    "title": "Faith Conference Portharcourt - Day 1",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-04-10",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/faith-conference-portharcourt-day-1/faith-conference-portharcourt-day-1.mp3",
+    "youtubeUrl": "https://youtu.be/viDRhOuxH50?t=5918",
+    "pageUrl": "https://sermons.joincci.org/sermons/faith-conference-portharcourt-day-1",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/faith-conference-portharcourt-day-1/faith-conference-portharcourt-day-1.jpg",
+    "duration": "1Hr 19Mins",
+    "description": "Apostle preaching at Faith Conference Portharcourt",
+    "series": "Faith Conference",
+    "tags": [
+      "fath conference",
+      "iren"
+    ],
+    "topics": []
   },
   {
     "source": "cci-api",
@@ -516,23 +577,6 @@
   },
   {
     "source": "cci-api",
-    "id": "69a471a7f9bb218648756ce6",
-    "slug": "endless-life-festival---ogun-state-|-afternoon-session",
-    "title": "ENDLESS LIFE FESTIVAL - OGUN STATE | AFTERNOON SESSION",
-    "speaker": "Apostle Emmanuel Iren",
-    "date": "2026-01-31",
-    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/endless-life-festival---ogun-state-|-afternoon-session/endless-life-festival---ogun-state-|-afternoon-session.mp3",
-    "youtubeUrl": "https://youtu.be/7kopnGkTxHI?t=4645",
-    "pageUrl": "https://sermons.joincci.org/sermons/endless-life-festival---ogun-state-|-afternoon-session",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/endless-life-festival---ogun-state-|-afternoon-session/endless-life-festival---ogun-state-|-afternoon-session.jpg",
-    "duration": "57Mins 16Secs",
-    "description": "ENDLESS LIFE FESTIVAL - OGUN STATE | MORNING SESSION",
-    "series": "ELF",
-    "tags": [],
-    "topics": []
-  },
-  {
-    "source": "cci-api",
     "id": "69a46e24f9bb218648756c3e",
     "slug": "endless-life-festival---ogun-state-|-morning-session",
     "title": "ENDLESS LIFE FESTIVAL - OGUN STATE | MORNING SESSION",
@@ -544,6 +588,23 @@
     "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/endless-life-festival---ogun-state-|-morning-session/endless-life-festival---ogun-state-|-morning-session.jpg",
     "duration": "1Hr 27Mins",
     "description": "ENDLESS LIFE FESTIVAL - OGUN STATE",
+    "series": "ELF",
+    "tags": [],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
+    "id": "69a471a7f9bb218648756ce6",
+    "slug": "endless-life-festival---ogun-state-|-afternoon-session",
+    "title": "ENDLESS LIFE FESTIVAL - OGUN STATE | AFTERNOON SESSION",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-01-31",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/endless-life-festival---ogun-state-|-afternoon-session/endless-life-festival---ogun-state-|-afternoon-session.mp3",
+    "youtubeUrl": "https://youtu.be/7kopnGkTxHI?t=4645",
+    "pageUrl": "https://sermons.joincci.org/sermons/endless-life-festival---ogun-state-|-afternoon-session",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/endless-life-festival---ogun-state-|-afternoon-session/endless-life-festival---ogun-state-|-afternoon-session.jpg",
+    "duration": "57Mins 16Secs",
+    "description": "ENDLESS LIFE FESTIVAL - OGUN STATE | MORNING SESSION",
     "series": "ELF",
     "tags": [],
     "topics": []
@@ -654,25 +715,6 @@
   },
   {
     "source": "cci-api",
-    "id": "695ad425c011182c85832153",
-    "slug": "overture-2025-with-apostle-emmanuel-iren",
-    "title": "OVERTURE 2025 WITH APOSTLE EMMANUEL IREN",
-    "speaker": "Apostle Emmanuel Iren",
-    "date": "2025-12-31",
-    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/overture-2025-with-apostle-emmanuel-iren/overture-2025-with-apostle-emmanuel-iren.mp3",
-    "youtubeUrl": "https://youtu.be/iIrMI1hlzdU?t=11484",
-    "pageUrl": "https://sermons.joincci.org/sermons/overture-2025-with-apostle-emmanuel-iren",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/overture-2025-with-apostle-emmanuel-iren/overture-2025-with-apostle-emmanuel-iren.jpeg",
-    "duration": "1Hr 28Mins",
-    "description": "📌 No guaranteed strategy makes a year better, except if the Lord wills. We may plan to do this or that, but it is not in a man’s power to direct his own steps. Our lives are ultimately guided and sustained by God. 📌 Trusting in the Lord is a strategy. Psalm 20:7 reminds us that some trust in chariots and horses, but we choose to trust in the name of the Lord our God. Our strength, wisdom, and intelligence alone did not bring us this far but God did. 📌 God’s faithfulness in the past is our conviction for the future. The same God who fed a generation with bread for forty years continues to perform miracles today. 📌 We must build a devotional system that helps us remember God’s goodness, because His goodness is replicable. Creating intentional moments, such as memorials to celebrate what God has done, helps us sustain the miracles He gives. 📌 Ebenezer means “Stone of Help,” and this is God’s word for us in the year 2026. Our help comes from God alone and from no other source. What does Ebenezer represent? • Thanksgiving – Acknowledging all God has done and thanking Him in advance for what He will yet do. • Genuine devotion and repentance – Allowing God to work on our hearts while maintaining a consistent devotional life. • Boundary markers – Making fresh decisions and setting clear boundaries for our consecration. • Prophecy – Just as God spoke to our fathers, beginning with Abraham, His word to us remains sure and eternal.",
-    "series": "EBENEZER",
-    "tags": [],
-    "topics": [
-      "prophecy"
-    ]
-  },
-  {
-    "source": "cci-api",
     "id": "69565eb3c011182c85812fd2",
     "slug": "prophetic-declarations-for-2026---apostle-emmanuel-iren",
     "title": "Prophetic Declarations For 2026 - Apostle Emmanuel Iren",
@@ -684,6 +726,25 @@
     "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/prophetic-declarations-for-2026---apostle-emmanuel-iren/prophetic-declarations-for-2026---apostle-emmanuel-iren.jpeg",
     "duration": "5Mins 5Secs",
     "description": "“Then Samuel took a stone and set it between Mizpah and Shen, and called its name Ebenezer, saying, Thus far the Lord has helped us.” — 1 Samuel 7:12 (NKJV) Ebenezer reminds us that our past, present, and future are sustained by God’s unfailing help. 2026 is a year of remembrance, reliance, and confidence in the One who brought us this far. Welcome to 2026 — our year of EBENEZER.",
+    "series": "EBENEZER",
+    "tags": [],
+    "topics": [
+      "prophecy"
+    ]
+  },
+  {
+    "source": "cci-api",
+    "id": "695ad425c011182c85832153",
+    "slug": "overture-2025-with-apostle-emmanuel-iren",
+    "title": "OVERTURE 2025 WITH APOSTLE EMMANUEL IREN",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2025-12-31",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/overture-2025-with-apostle-emmanuel-iren/overture-2025-with-apostle-emmanuel-iren.mp3",
+    "youtubeUrl": "https://youtu.be/iIrMI1hlzdU?t=11484",
+    "pageUrl": "https://sermons.joincci.org/sermons/overture-2025-with-apostle-emmanuel-iren",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/overture-2025-with-apostle-emmanuel-iren/overture-2025-with-apostle-emmanuel-iren.jpeg",
+    "duration": "1Hr 28Mins",
+    "description": "📌 No guaranteed strategy makes a year better, except if the Lord wills. We may plan to do this or that, but it is not in a man’s power to direct his own steps. Our lives are ultimately guided and sustained by God. 📌 Trusting in the Lord is a strategy. Psalm 20:7 reminds us that some trust in chariots and horses, but we choose to trust in the name of the Lord our God. Our strength, wisdom, and intelligence alone did not bring us this far but God did. 📌 God’s faithfulness in the past is our conviction for the future. The same God who fed a generation with bread for forty years continues to perform miracles today. 📌 We must build a devotional system that helps us remember God’s goodness, because His goodness is replicable. Creating intentional moments, such as memorials to celebrate what God has done, helps us sustain the miracles He gives. 📌 Ebenezer means “Stone of Help,” and this is God’s word for us in the year 2026. Our help comes from God alone and from no other source. What does Ebenezer represent? • Thanksgiving – Acknowledging all God has done and thanking Him in advance for what He will yet do. • Genuine devotion and repentance – Allowing God to work on our hearts while maintaining a consistent devotional life. • Boundary markers – Making fresh decisions and setting clear boundaries for our consecration. • Prophecy – Just as God spoke to our fathers, beginning with Abraham, His word to us remains sure and eternal.",
     "series": "EBENEZER",
     "tags": [],
     "topics": [
@@ -760,6 +821,23 @@
   },
   {
     "source": "cci-api",
+    "id": "6939632ca2955a018af66b4b",
+    "slug": "the-unstoppable-move-of-god-through-strong-families",
+    "title": "The Unstoppable Move of God Through Strong Families",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2025-12-07",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/the-unstoppable-move-of-god-through-strong-families/the-unstoppable-move-of-god-through-strong-families.mp3",
+    "youtubeUrl": "https://www.youtube.com/watch?v=BWGM4ca7pZE&t=6650s&pp=0gcJCSgKAYcqIYzv",
+    "pageUrl": "https://sermons.joincci.org/sermons/the-unstoppable-move-of-god-through-strong-families",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/the-unstoppable-move-of-god-through-strong-families/the-unstoppable-move-of-god-through-strong-families.png",
+    "duration": "45Mins 52Secs",
+    "description": "God’s unstoppable love is seen in our daily lives and ministries (Gen 18:18-19). Family is God’s strategy for His unstoppable move. The first time God ever spoke to a human, it was about a family (Gen 1:28).",
+    "series": "Reboot Camp 25",
+    "tags": [],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
     "id": "693964a3a2955a018af66b72",
     "slug": "the-unstoppable-move of god-iv",
     "title": "The Unstoppable Move of God IV",
@@ -777,17 +855,17 @@
   },
   {
     "source": "cci-api",
-    "id": "6939632ca2955a018af66b4b",
-    "slug": "the-unstoppable-move-of-god-through-strong-families",
-    "title": "The Unstoppable Move of God Through Strong Families",
+    "id": "69396157a2955a018af66b03",
+    "slug": "rbc-25---the-providence-and-sovereignty-of-god.",
+    "title": "RBC 25 - The Providence and Sovereignty of God.",
     "speaker": "Apostle Emmanuel Iren",
-    "date": "2025-12-07",
-    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/the-unstoppable-move-of-god-through-strong-families/the-unstoppable-move-of-god-through-strong-families.mp3",
-    "youtubeUrl": "https://www.youtube.com/watch?v=BWGM4ca7pZE&t=6650s&pp=0gcJCSgKAYcqIYzv",
-    "pageUrl": "https://sermons.joincci.org/sermons/the-unstoppable-move-of-god-through-strong-families",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/the-unstoppable-move-of-god-through-strong-families/the-unstoppable-move-of-god-through-strong-families.png",
-    "duration": "45Mins 52Secs",
-    "description": "God’s unstoppable love is seen in our daily lives and ministries (Gen 18:18-19). Family is God’s strategy for His unstoppable move. The first time God ever spoke to a human, it was about a family (Gen 1:28).",
+    "date": "2025-12-05",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/rbc-25---the-providence-and-sovereignty-of-god./rbc-25---the-providence-and-sovereignty-of-god..mp3",
+    "youtubeUrl": "https://www.youtube.com/watch?v=GZav0FSYWtE",
+    "pageUrl": "https://sermons.joincci.org/sermons/rbc-25---the-providence-and-sovereignty-of-god.",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/rbc-25---the-providence-and-sovereignty-of-god./rbc-25---the-providence-and-sovereignty-of-god..png",
+    "duration": "1Hr 1Min",
+    "description": "THE PROVIDENCE AND SOVEREIGNTY OF GOD. Sovereignty is who God is and what He does, while providence is God’s intentional, personal involvement in the details of our lives. These two truths form the foundation for creative miracles. Apostle showed us through scripture how before any need arises, God has already gone ahead to provide. Just like Abraham, while he climbed the mountain in obedience, the ram was already climbing too. (Genesis 22:13) In the will of God, we can never be stranded, because every instruction already carries its provision. Here are key points to note from the sermon: 📍 Providence guarantees provision: Anything God sends you to do already has a solution waiting. (Genesis 22; Psalm 2:2–4)",
     "series": "Reboot Camp 25",
     "tags": [],
     "topics": []
@@ -810,23 +888,6 @@
     "topics": [
       "holy_spirit"
     ]
-  },
-  {
-    "source": "cci-api",
-    "id": "69396157a2955a018af66b03",
-    "slug": "rbc-25---the-providence-and-sovereignty-of-god.",
-    "title": "RBC 25 - The Providence and Sovereignty of God.",
-    "speaker": "Apostle Emmanuel Iren",
-    "date": "2025-12-05",
-    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/rbc-25---the-providence-and-sovereignty-of-god./rbc-25---the-providence-and-sovereignty-of-god..mp3",
-    "youtubeUrl": "https://www.youtube.com/watch?v=GZav0FSYWtE",
-    "pageUrl": "https://sermons.joincci.org/sermons/rbc-25---the-providence-and-sovereignty-of-god.",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/rbc-25---the-providence-and-sovereignty-of-god./rbc-25---the-providence-and-sovereignty-of-god..png",
-    "duration": "1Hr 1Min",
-    "description": "THE PROVIDENCE AND SOVEREIGNTY OF GOD. Sovereignty is who God is and what He does, while providence is God’s intentional, personal involvement in the details of our lives. These two truths form the foundation for creative miracles. Apostle showed us through scripture how before any need arises, God has already gone ahead to provide. Just like Abraham, while he climbed the mountain in obedience, the ram was already climbing too. (Genesis 22:13) In the will of God, we can never be stranded, because every instruction already carries its provision. Here are key points to note from the sermon: 📍 Providence guarantees provision: Anything God sends you to do already has a solution waiting. (Genesis 22; Psalm 2:2–4)",
-    "series": "Reboot Camp 25",
-    "tags": [],
-    "topics": []
   },
   {
     "source": "cci-api",
