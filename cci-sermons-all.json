@@ -1,22 +1,39 @@
 [
   {
     "source": "youtube",
-    "id": "qO4FayU4nAQ",
+    "id": "JMQpaqubK3g",
+    "slug": "why-am-i-struggling",
+    "title": "Why Am I Struggling?",
+    "rawYtTitle": "WHY AM I STRUGGLING? | MDWK SERVICE | 15TH JULY 2026 | CELEBRATION CHURCH INT'L",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-07-15",
+    "audioUrl": "",
+    "youtubeUrl": "https://www.youtube.com/watch?v=JMQpaqubK3g",
+    "pageUrl": "https://www.youtube.com/watch?v=JMQpaqubK3g",
+    "thumbnail": "https://i.ytimg.com/vi/JMQpaqubK3g/hqdefault.jpg",
+    "duration": "",
+    "description": "LIKE, COMMENT, and SUBSCRIBE for more powerful content from CCI campuses around the world.\n\n🌐 Stay Connected with Us:\nWebsite: https://joincci.org\nInstagram: https://www.instagram.com/cci_global\nTwitter: https://twitter.com/cci__global\nFacebook: https://www.facebook.com/CelebrationChurchIntl/\n\nJoin our daily devotion at 6AM, 12NOON & 8PM (WAT):\nhttp://bit.ly/Triumph30Live",
+    "series": "Wednesday Service",
+    "tags": [
+      "Wednesday Service"
+    ],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
+    "id": "6a5544cf3aa1ea49b36356ea",
     "slug": "special-miracle-service",
     "title": "Special Miracle Service",
-    "rawYtTitle": "SPECIAL MIRACLE SERVICE | SECOND SERVICE | SUNDAY 12TH JULY 2026 |  CELEBRATION CHURCH INT'L",
     "speaker": "Apostle Emmanuel Iren",
     "date": "2026-07-12",
-    "audioUrl": "",
-    "youtubeUrl": "https://www.youtube.com/watch?v=qO4FayU4nAQ",
-    "pageUrl": "https://www.youtube.com/watch?v=qO4FayU4nAQ",
-    "thumbnail": "https://i.ytimg.com/vi/qO4FayU4nAQ/hqdefault.jpg",
-    "duration": "",
-    "description": "LIKE, COMMENT, and SUBSCRIBE for more powerful content from CCI campuses around the world.\n\n🌐 Stay Connected with Us:\nWebsite: https://joinccing.org\nInstagram:   / cci_global  \nTwitter:   / cci__global  \nFacebook:   / celebrationchurchintl  \n\nJoin our daily devotion at 6AM, 12NOON & 8PM (WAT):\nhttp://bit.ly/Triumph30Live",
-    "series": "Sunday Service",
-    "tags": [
-      "Sunday Service"
-    ],
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/special-miracle-service/special-miracle-service.mp3",
+    "youtubeUrl": "https://youtu.be/qO4FayU4nAQ?t=5013",
+    "pageUrl": "https://sermons.joincci.org/sermons/special-miracle-service",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/special-miracle-service/special-miracle-service.jpg",
+    "duration": "26Mins 15Secs",
+    "description": "Jesus is the character of the Father revealed. The exact image of the Father. It is God's will to heal and to provide. It is demonstrated through Christ and those in Christ must do it with boldness, seriousness and determination. The heart with which to approach God for anything: He must see that you have no other rock.",
+    "series": "Fervour",
+    "tags": [],
     "topics": []
   },
   {
@@ -37,6 +54,23 @@
     "tags": [
       "Wednesday Service"
     ],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
+    "id": "6a5543c53aa1ea49b363569a",
+    "slug": "mid-year-thanksgiving",
+    "title": "Mid-Year Thanksgiving",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-07-05",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/mid-year-thanksgiving/mid-year-thanksgiving.mp3",
+    "youtubeUrl": "https://youtu.be/iJ8KeaS25jU?t=5339",
+    "pageUrl": "https://sermons.joincci.org/sermons/mid-year-thanksgiving",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/mid-year-thanksgiving/mid-year-thanksgiving.png",
+    "duration": "42Mins 1Sec",
+    "description": "There are prayers God answers before we even pray, dangers He has kept us from without our knowledge, and countless mercies we enjoy daily without even realizing it. Major points to note from the sermon WHAT IS THANKSGIVING? Thanksgiving is the deliberate expression of gratitude in response to God’s goodness and His benefits. The measure of our thanksgiving should reflect the greatness of His favour toward us. Not everything God does for us is obvious. We remember the sicknesses He healed us from, but we may never know the ones He prevented us from having. Every good and perfect gift comes from God.(James 1:17) DON’T FORGET HIS BENEFITS The Psalmist reminds us to bless the Lord and forget not all His benefits.(Psalm 103:2) Many people are thankful, but they forget too quickly. Gratitude should not be momentary—it should become a lifestyle. In Luke 17, ten lepers received healing, but only one returned to give thanks.(Luke 17:15–17) We must intentionally remember God’s faithfulness and continually give Him thanks for all He has done.(Deuteronomy 8:15–18) THANKSGIVING IS A POSTURE OF FAITH In biblical thanksgiving, we do not wait until after the miracle to praise God. Thanksgiving is not just a response—it is how we lead. Praise and thanksgiving position our hearts in faith for what God is able to do. Always thank forward. Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving, let your requests be made known unto God. (Philippians 4:6) Brag about your God because He is greater than every mountain standing before you. JESUS SHOWED US THE PATTERN Before feeding the multitude, Jesus gave thanks before the miracle happened.(John 6) Standing before Lazarus’ tomb, Jesus thanked the Father before Lazarus came back to life. Thanksgiving should come first, not last.As believers, we must never lose the habit of remembering God’s faithfulness or become overfamiliar with His goodness. Everything we have. Everything we’ve become. Every open door .Every victory. It is all because of God. As we continue through the rest of the year, may our hearts never lose the wonder of God’s faithfulness. Let thanksgiving become more than words. It should be our lifestyle, our confession, and our posture of faith. Let’s continue to thank forward, trusting that the God who has been faithful will remain faithful.",
+    "series": "Fervour",
+    "tags": [],
     "topics": []
   },
   {
@@ -1540,6 +1574,23 @@
     "title": "THE DOCTRINE OF THE FINAL AUTHORITY OF SCRIPTURES",
     "speaker": "Apostle Emmanuel Iren",
     "date": "2025-07-06",
+    "audioUrl": "",
+    "youtubeUrl": "https://youtu.be/NzEVoHzZxnQ?t=2372",
+    "pageUrl": "https://sermons.joincci.org/sermons/the-doctrine-of-the-final-authority-of-scriptures",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/the-doctrine-of-the-final-authority-of-scriptures/the-doctrine-of-the-final-authority-of-scriptures.jpg",
+    "duration": "",
+    "description": "We live in a generation that values unity without truth, where biblical convictions are often torn down in the name of freedom. In this powerful episode, we explore the urgent need to guard sound doctrine and stay anchored in God’s Word amid cultural shifts. Key truths you’ll discover: 📍 True freedom isn’t the absence of boundaries—it’s living rightly within God’s structure. 📍 Unity is not agreement at any cost. Ephesians 4:13 calls us to “unity of the faith,” not just coexistence with error. 📍 The Word must remain our doctrinal anchor. Encounters alone are not enough; we need Scripture as our foundation. 📍 Discernment is as vital as love. False teachers thrive because believers tolerate error out of sentiment, not truth. 📍 Even Jesus overcame temptation by declaring, “It is written” (Matthew 4). If the Word was His defense, it must be ours too. You’ll also learn why: ✅ Every false doctrine is a strategy of the enemy (2 Corinthians 11:3). ✅ Sentiment is not sound doctrine. “Peace if possible; truth at all cost.” ✅ Spiritual maturity means unwavering loyalty to Scripture, even when culture shifts. As you step into the week, make a conscious decision to live by the Word, defend the Word, and refuse compromise.",
+    "series": "Jesus",
+    "tags": [],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
+    "id": "68b37e91bd9dbc0734dcfe97",
+    "slug": "the-doctrine-of-the-final-authority-of-scriptures",
+    "title": "THE DOCTRINE OF THE FINAL AUTHORITY OF SCRIPTURES",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2025-07-06",
     "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/the-doctrine-of-the-final-authority-of-scriptures/the-doctrine-of-the-final-authority-of-scriptures.m4a",
     "youtubeUrl": "https://youtu.be/NzEVoHzZxnQ?t=2372",
     "pageUrl": "https://sermons.joincci.org/sermons/the-doctrine-of-the-final-authority-of-scriptures",
@@ -1551,19 +1602,19 @@
     "topics": []
   },
   {
-    "source": "cci-api",
-    "id": "68b6eef6bd9dbc0734dd0f50",
+    "source": "cci-rss",
+    "id": "",
     "slug": "the-final-authority-of-the-scriptures",
     "title": "The Final Authority of the Scriptures",
     "speaker": "Apostle Emmanuel Iren",
     "date": "2025-07-06",
     "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/the-final-authority-of-the-scriptures/the-final-authority-of-the-scriptures.m4a",
-    "youtubeUrl": "https://youtu.be/NzEVoHzZxnQ?t=2659",
+    "youtubeUrl": "",
     "pageUrl": "https://sermons.joincci.org/sermons/the-final-authority-of-the-scriptures",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/the-final-authority-of-the-scriptures/the-final-authority-of-the-scriptures.jpg",
+    "thumbnail": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/the-final-authority-of-the-scriptures/the-final-authority-of-the-scriptures.jpg",
     "duration": "47Mins 46Secs",
-    "description": "In a world driven by opinions, trends, and emotions, what anchors your life? In this episode, we are reminded that for every believer, Scripture is the ultimate authority. We live by Sola Scriptura—“Scripture Alone.” Every belief, tradition, opinion, and experience must submit to God’s Word. Here’s what that means: 📍 If God has spoken, the debate is over. No cultural trend or human argument can override His Word (Romans 3:4). 📍 The Bible is profitable for: ✔️ Doctrine – Defining what we believe (2 Timothy 3:16–17). ✔️ Reproof – Convicting us of truth. ✔️ Correction – Straightening wrong thinking. ✔️ Instruction in righteousness – Giving us clear guidance for living. 📍 Tradition isn’t final—Scripture is. Even long-standing church customs must bow to the Word (John 4:23–24). 📍 True discipleship is submission to the Word. It’s more than singing songs or serving in church—it’s making the Bible your ultimate compass in every decision: business, relationships, parenting, and life choices. As you step into the week, let God’s Word be your final authority. Live by it, through it, and for it.",
-    "series": "Scriptures",
+    "description": "In a world driven by opinions, trends, and emotions, what anchors your life? In this episode, we are reminded that for every believer, Scripture is the ultimate authority. We live by Sola Scriptura—“Scripture Alone.",
+    "series": "",
     "tags": [],
     "topics": []
   },
