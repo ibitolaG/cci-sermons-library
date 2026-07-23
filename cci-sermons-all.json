@@ -1,6 +1,26 @@
 [
   {
     "source": "youtube",
+    "id": "p-X8AoGzMEI",
+    "slug": "navigating-dry-seasons",
+    "title": "Navigating Dry Seasons",
+    "rawYtTitle": "NAVIGATING DRY SEASONS | MDWK SERVICE | 22ND JULY 2026 | CELEBRATION CHURCH INT'L",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-07-22",
+    "audioUrl": "",
+    "youtubeUrl": "https://www.youtube.com/watch?v=p-X8AoGzMEI",
+    "pageUrl": "https://www.youtube.com/watch?v=p-X8AoGzMEI",
+    "thumbnail": "https://i.ytimg.com/vi/p-X8AoGzMEI/hqdefault.jpg",
+    "duration": "",
+    "description": "LIKE, COMMENT, and SUBSCRIBE for more powerful content from CCI campuses around the world.\n\n🌐 Stay Connected with Us:\nWebsite: https://joincci.org\nInstagram: https://www.instagram.com/cci_global\nTwitter: https://twitter.com/cci__global\nFacebook: https://www.facebook.com/CelebrationChurchIntl/\n\nJoin our daily devotion at 6AM, 12NOON & 8PM (WAT):\nhttp://bit.ly/Triumph30Live",
+    "series": "Wednesday Service",
+    "tags": [
+      "Wednesday Service"
+    ],
+    "topics": []
+  },
+  {
+    "source": "youtube",
     "id": "s168c0SXon4",
     "slug": "fervent-in-spirit-what-a-great-time-we-had-in-service-today",
     "title": "Fervent In Spirit! What A Great Time We Had In Service Today!!!",
@@ -32,7 +52,7 @@
     "pageUrl": "https://www.youtube.com/watch?v=gG5o9GnSYNk",
     "thumbnail": "https://i.ytimg.com/vi/gG5o9GnSYNk/hqdefault.jpg",
     "duration": "",
-    "description": "LIKE, COMMENT, and SUBSCRIBE for more powerful content from CCI campuses around the world.\n\n🌐 Stay Connected with Us:\nWebsite: https://joinccing.org\nInstagram:   / cci_global  \nTwitter:   / cci__global  \nFacebook:   / celebrationchurchintl  \n\nJoin our daily devotion at 6AM, 12NOON & 8PM (WAT):\nhttp://bit.ly/Triumph30Live",
+    "description": "00:00:00-00:09:35 |  PRAYER AND CONFESSION\n00:09:35-00:10:48 |  CHECK IN AND TESTIMONY\n00:10:48-00:20:56 |  CCW MINISTRATION\n00:20:56-02:06:08 |  SERMON\n02:06:08-02:14:04 | GIVING AND ANNOUNCEMENT\n02:14:04-02:24:44 | END OF SERVICE\n\n\nLIKE, COMMENT, and SUBSCRIBE for more powerful content from CCI campuses around the world.\n\n🌐 Stay Connected with Us:\nWebsite: https://joinccing.org\nInstagram:   / cci_global  \nTwitter:   / cci__global  \nFacebook:   / celebrationchurchintl  \n\nJoin our daily devotio",
     "series": "Sunday Service",
     "tags": [
       "Sunday Service"
@@ -150,26 +170,6 @@
     "series": "Wednesday Service",
     "tags": [
       "Wednesday Service"
-    ],
-    "topics": []
-  },
-  {
-    "source": "youtube",
-    "id": "JMll3mtW5do",
-    "slug": "pyro-vol-2",
-    "title": "Pyro Vol. 2",
-    "rawYtTitle": "PYRO VOL. 2 | PRAY WITH THIS PRAYER COMPANION | CELEBRATION CHURCH INTERNATIONAL",
-    "speaker": "Apostle Emmanuel Iren",
-    "date": "2026-07-01",
-    "audioUrl": "",
-    "youtubeUrl": "https://www.youtube.com/watch?v=JMll3mtW5do",
-    "pageUrl": "https://www.youtube.com/watch?v=JMll3mtW5do",
-    "thumbnail": "https://i.ytimg.com/vi/JMll3mtW5do/hqdefault.jpg",
-    "duration": "",
-    "description": "LIKE, COMMENT, and SUBSCRIBE for more powerful content from CCI campuses around the world.\n\n🌐 Stay Connected with Us:\nWebsite: https://joinccing.org\nInstagram: https://www.instagram.com/cci_global\nTwitter: https://twitter.com/cci__global\nFacebook: https://www.facebook.com/CelebrationChurchIntl/\n\nJoin our daily devotion at 6AM, 12NOON & 8PM (WAT):\nhttp://bit.ly/Triumph30Live",
-    "series": "Sunday Service",
-    "tags": [
-      "Sunday Service"
     ],
     "topics": []
   },
@@ -432,25 +432,6 @@
   },
   {
     "source": "cci-api",
-    "id": "6a038bdaf8a613c49f17ea10",
-    "slug": "when-zoe-takes-over-elf-europe",
-    "title": "When Zoe Takes Over - ELF Europe",
-    "speaker": "Apostle Emmanuel Iren",
-    "date": "2026-04-25",
-    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/when-zoe-takes-over-elf-europe/when-zoe-takes-over-elf-europe.mp3",
-    "youtubeUrl": "https://youtu.be/w_z0ofbnC1Y?t=7650",
-    "pageUrl": "https://sermons.joincci.org/sermons/when-zoe-takes-over-elf-europe",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/when-zoe-takes-over-elf-europe/when-zoe-takes-over-elf-europe.jpg",
-    "duration": "56Mins 50Secs",
-    "description": "Apostle Taught on When Zoe Takes Over at Endless Life Festival Europe",
-    "series": "ELF",
-    "tags": [
-      "elf"
-    ],
-    "topics": []
-  },
-  {
-    "source": "cci-api",
     "id": "69fb55d4100cfcbed45e7845",
     "slug": "the-utter-helplessness-of-man-elf-europe",
     "title": "The Utter Helplessness of Man - ELF Europe",
@@ -466,6 +447,25 @@
     "tags": [
       "elf",
       "pstirensaid"
+    ],
+    "topics": []
+  },
+  {
+    "source": "cci-api",
+    "id": "6a038bdaf8a613c49f17ea10",
+    "slug": "when-zoe-takes-over-elf-europe",
+    "title": "When Zoe Takes Over - ELF Europe",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2026-04-25",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/when-zoe-takes-over-elf-europe/when-zoe-takes-over-elf-europe.mp3",
+    "youtubeUrl": "https://youtu.be/w_z0ofbnC1Y?t=7650",
+    "pageUrl": "https://sermons.joincci.org/sermons/when-zoe-takes-over-elf-europe",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/when-zoe-takes-over-elf-europe/when-zoe-takes-over-elf-europe.jpg",
+    "duration": "56Mins 50Secs",
+    "description": "Apostle Taught on When Zoe Takes Over at Endless Life Festival Europe",
+    "series": "ELF",
+    "tags": [
+      "elf"
     ],
     "topics": []
   },
@@ -1127,23 +1127,6 @@
   },
   {
     "source": "cci-api",
-    "id": "6939632ca2955a018af66b4b",
-    "slug": "the-unstoppable-move-of-god-through-strong-families",
-    "title": "The Unstoppable Move of God Through Strong Families",
-    "speaker": "Apostle Emmanuel Iren",
-    "date": "2025-12-07",
-    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/the-unstoppable-move-of-god-through-strong-families/the-unstoppable-move-of-god-through-strong-families.mp3",
-    "youtubeUrl": "https://www.youtube.com/watch?v=BWGM4ca7pZE&t=6650s&pp=0gcJCSgKAYcqIYzv",
-    "pageUrl": "https://sermons.joincci.org/sermons/the-unstoppable-move-of-god-through-strong-families",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/the-unstoppable-move-of-god-through-strong-families/the-unstoppable-move-of-god-through-strong-families.png",
-    "duration": "45Mins 52Secs",
-    "description": "God’s unstoppable love is seen in our daily lives and ministries (Gen 18:18-19). Family is God’s strategy for His unstoppable move. The first time God ever spoke to a human, it was about a family (Gen 1:28).",
-    "series": "Reboot Camp 25",
-    "tags": [],
-    "topics": []
-  },
-  {
-    "source": "cci-api",
     "id": "693964a3a2955a018af66b72",
     "slug": "the-unstoppable-move of god-iv",
     "title": "The Unstoppable Move of God IV",
@@ -1161,17 +1144,17 @@
   },
   {
     "source": "cci-api",
-    "id": "69396157a2955a018af66b03",
-    "slug": "rbc-25---the-providence-and-sovereignty-of-god.",
-    "title": "RBC 25 - The Providence and Sovereignty of God.",
+    "id": "6939632ca2955a018af66b4b",
+    "slug": "the-unstoppable-move-of-god-through-strong-families",
+    "title": "The Unstoppable Move of God Through Strong Families",
     "speaker": "Apostle Emmanuel Iren",
-    "date": "2025-12-05",
-    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/rbc-25---the-providence-and-sovereignty-of-god./rbc-25---the-providence-and-sovereignty-of-god..mp3",
-    "youtubeUrl": "https://www.youtube.com/watch?v=GZav0FSYWtE",
-    "pageUrl": "https://sermons.joincci.org/sermons/rbc-25---the-providence-and-sovereignty-of-god.",
-    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/rbc-25---the-providence-and-sovereignty-of-god./rbc-25---the-providence-and-sovereignty-of-god..png",
-    "duration": "1Hr 1Min",
-    "description": "THE PROVIDENCE AND SOVEREIGNTY OF GOD. Sovereignty is who God is and what He does, while providence is God’s intentional, personal involvement in the details of our lives. These two truths form the foundation for creative miracles. Apostle showed us through scripture how before any need arises, God has already gone ahead to provide. Just like Abraham, while he climbed the mountain in obedience, the ram was already climbing too. (Genesis 22:13) In the will of God, we can never be stranded, because every instruction already carries its provision. Here are key points to note from the sermon: 📍 Providence guarantees provision: Anything God sends you to do already has a solution waiting. (Genesis 22; Psalm 2:2–4)",
+    "date": "2025-12-07",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/the-unstoppable-move-of-god-through-strong-families/the-unstoppable-move-of-god-through-strong-families.mp3",
+    "youtubeUrl": "https://www.youtube.com/watch?v=BWGM4ca7pZE&t=6650s&pp=0gcJCSgKAYcqIYzv",
+    "pageUrl": "https://sermons.joincci.org/sermons/the-unstoppable-move-of-god-through-strong-families",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/the-unstoppable-move-of-god-through-strong-families/the-unstoppable-move-of-god-through-strong-families.png",
+    "duration": "45Mins 52Secs",
+    "description": "God’s unstoppable love is seen in our daily lives and ministries (Gen 18:18-19). Family is God’s strategy for His unstoppable move. The first time God ever spoke to a human, it was about a family (Gen 1:28).",
     "series": "Reboot Camp 25",
     "tags": [],
     "topics": []
@@ -1194,6 +1177,23 @@
     "topics": [
       "holy_spirit"
     ]
+  },
+  {
+    "source": "cci-api",
+    "id": "69396157a2955a018af66b03",
+    "slug": "rbc-25---the-providence-and-sovereignty-of-god.",
+    "title": "RBC 25 - The Providence and Sovereignty of God.",
+    "speaker": "Apostle Emmanuel Iren",
+    "date": "2025-12-05",
+    "audioUrl": "https://dtzpjgnovwt53.cloudfront.net/sermon-assets/rbc-25---the-providence-and-sovereignty-of-god./rbc-25---the-providence-and-sovereignty-of-god..mp3",
+    "youtubeUrl": "https://www.youtube.com/watch?v=GZav0FSYWtE",
+    "pageUrl": "https://sermons.joincci.org/sermons/rbc-25---the-providence-and-sovereignty-of-god.",
+    "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/rbc-25---the-providence-and-sovereignty-of-god./rbc-25---the-providence-and-sovereignty-of-god..png",
+    "duration": "1Hr 1Min",
+    "description": "THE PROVIDENCE AND SOVEREIGNTY OF GOD. Sovereignty is who God is and what He does, while providence is God’s intentional, personal involvement in the details of our lives. These two truths form the foundation for creative miracles. Apostle showed us through scripture how before any need arises, God has already gone ahead to provide. Just like Abraham, while he climbed the mountain in obedience, the ram was already climbing too. (Genesis 22:13) In the will of God, we can never be stranded, because every instruction already carries its provision. Here are key points to note from the sermon: 📍 Providence guarantees provision: Anything God sends you to do already has a solution waiting. (Genesis 22; Psalm 2:2–4)",
+    "series": "Reboot Camp 25",
+    "tags": [],
+    "topics": []
   },
   {
     "source": "cci-api",
