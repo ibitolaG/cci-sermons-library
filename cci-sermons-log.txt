@@ -1,6 +1,6 @@
-CCI API: total=502, perPage=20, pages=26, param=limit
-CCI API: fetched 502 sermons total
-RSS: https://sermons-api.essantra.joincci.org/rss.xml — 502 items
+CCI API: total=505, perPage=20, pages=26, param=limit
+CCI API: fetched 505 sermons total
+RSS: https://sermons-api.essantra.joincci.org/rss.xml — 505 items
 YouTube API: page 1 failed — HTTP 403
 YouTube API: 0 videos total (1 pages)
 YouTube API: returned 0 — possible cause: YouTube Data API v3 not enabled for this key. Falling back to RSS.
