@@ -2168,6 +2168,28 @@
     "label": "Prophecy & Prophetic Ministry",
     "sermons": [
       {
+        "source": "youtube",
+        "id": "dMJnKc-Rxs4",
+        "slug": "prophetic-insight-is-not-the-prerogative-of-pastors-alone",
+        "title": "Prophetic Insight Is Not The Prerogative Of Pastors Alone!",
+        "rawYtTitle": "Prophetic insight is not the prerogative of pastors alone!",
+        "speaker": "Apostle Emmanuel Iren",
+        "date": "2026-10-09",
+        "audioUrl": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=dMJnKc-Rxs4",
+        "pageUrl": "https://www.youtube.com/watch?v=dMJnKc-Rxs4",
+        "thumbnail": "https://i.ytimg.com/vi/dMJnKc-Rxs4/hqdefault.jpg",
+        "duration": "",
+        "description": "",
+        "series": "Sunday Service",
+        "tags": [
+          "Sunday Service"
+        ],
+        "topics": [
+          "prophecy"
+        ]
+      },
+      {
         "source": "cci-api",
         "id": "6a3a7a46b41d5fb9cc75d67f",
         "slug": "purpose-of-the-scriptures",
