@@ -1210,6 +1210,27 @@
       },
       {
         "source": "cci-api",
+        "id": "6adfdfa8bf26e14143e5942f",
+        "slug": "explore-the-teaching-ministry",
+        "title": "Explore: The Teaching Ministry",
+        "speaker": "Pastor Mike Michaels",
+        "date": "2024-08-25",
+        "audioUrl": "https://sermons-cdn.essantra.joincci.orghttps://cci-axios-web-cms-assets.s3.eu-north-1.amazonaws.com/sermon-assets/explore-the-teaching-ministry-2024-08-25/explore-the-teaching-ministry-2024-08-25.mp3",
+        "youtubeUrl": "https://www.youtube.com/watch?v=uTbTOKnITAI",
+        "pageUrl": "https://sermons.joincci.org/sermons/explore-the-teaching-ministry",
+        "thumbnail": "https://cci-axios-web-cms-assets.s3.eu-north-1.amazonaws.com/sermon-assets/explore-the-teaching-ministry-2024-08-25/explore-the-teaching-ministry-2024-08-25.jpg",
+        "duration": "1Hr 20Mins",
+        "description": "Pastor Mike Michaels taught on EXPLORE: THE TEACHING MINISTRY, drawing our attention to the place of sound teaching in Christian growth. From the Great Commission in Matthew 28:19–20, he showed that making disciples includes teaching people to observe what Jesus commanded. The message focused on two important questions: why we need a faithful teacher, and why we should belong to a local assembly. Here are some key lessons to remember: 📍 Discipleship requires teaching. Growth involves learning the Word and allowing it to shape our understanding and conduct. 📍 A faithful teacher remains committed to the message of Scripture. Eloquence and personal experiences should not take the place of accurately communicating God's Word. 📍 Read Scripture in context. We should pay attention to what comes before and after a passage instead of building conclusions on isolated statements. 📍 The Holy Spirit helps us understand the Word. His work in believers does not remove the need for faithful teaching or the place of the church in our growth. 📍 Choose a church thoughtfully. We should examine its understanding of the gospel, its approach to doctrine and the fruit of righteousness it encourages. 📍 Pass on what you have received faithfully. The instruction in 2 Timothy 2:2 reminds us that the teaching entrusted to us should reach others accurately. The message closed with prayer for the spread of the gospel and for sound doctrine to prevail. Let us receive faithful teaching with attention, remain rooted in the local church and practise what we learn.",
+        "series": "Explore",
+        "tags": [
+          "Explore"
+        ],
+        "topics": [
+          "holy_spirit"
+        ]
+      },
+      {
+        "source": "cci-api",
         "id": "66a662b646ef49b2cdd9eef8",
         "slug": "triggers-how-to-heal-from-trauma",
         "title": "Triggers - How to Heal From Trauma",
@@ -2169,6 +2190,25 @@
     "sermons": [
       {
         "source": "cci-api",
+        "id": "6adfaa10bf26e14143e58b4e",
+        "slug": "build-the-ark",
+        "title": "Build The Ark",
+        "speaker": "Apostle Emmanuel Iren",
+        "date": "2026-10-25",
+        "audioUrl": "https://sermons-cdn.essantra.joincci.org/sermon-assets/build-the-ark/build-the-ark.mp3",
+        "youtubeUrl": "https://youtu.be/aVgNFiM9ruc?t=4269",
+        "pageUrl": "https://sermons.joincci.org/sermons/build-the-ark",
+        "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/build-the-ark/build-the-ark.jpg",
+        "duration": "59Mins 41Secs",
+        "description": "Apostle took precedence from the story of Noah, teaching that in the days of Noah, people had never experienced rain as they would during the flood. Yet, Noah obeyed God and built an ark in preparation for what was coming (Genesis 6:14, 22). What looked unusual at the time was an act of obedience to God’s instructions. Here are some key lessons from the sermon: 📍WE ARE THE SALT AND LIGHT OF THE EARTH💡 Matthew 5:13–14 reminds us that we are the salt of the earth and the light of the world. • The Church carries the glory of God into the world. * We are not called to withdraw from society as darkness increases; we are called to influence it. * Our presence should preserve what is good, illuminate what is dark and point people to Christ. 📍OUR SECURITY IS IN CHRIST ALONE 🛡️ * Our security does not come from human systems, predictions or attempts to decode every end-time event. * Salvation belongs to God, and our confidence must remain in Christ. * While we must be discerning about the times we live in, we must not be driven by fear or sensational interpretations of prophecy. Christ is coming, but our response must be faithfulness, readiness and obedience. 📍DON’T JUST WATCH THE TIMES. PREPARE FOR THEM! ⏳ Jesus referenced the days of Noah in Luke 17:26–27 to show how people continued with ordinary life without recognising what was coming. * We must remember that we are strangers and pilgrims on the earth. * We must take God’s Word seriously and live with eternity in view. * We must reach people with the Gospel while we have the opportunity. The right response to the reality of Christ’s return is not panic. It is purposeful preparation. 📍GOD IS LOOKING FOR BUILDERS! 🏗️ Noah was not only a preacher of righteousness; he was also a builder who acted on God’s instructions. Genesis 6:22 tells us that Noah did everything God commanded him. * God wants to raise believers who can recognise what needs to be built in their generation. * We must be sensitive to the assignments God places in our hearts. * Your assignment may be in education, business, technology, media, government, entertainment or another sphere of society. * Don’t wait for everything to look convenient before you obey God. The question is not just whether you can recognise what is wrong with the world. What has God asked you to build in response? 📍BUILD ARKS THAT WILL PRESERVE THE NEXT GENERATION Building is not only about constructing physical structures. It is also about creating systems, institutions and environments that preserve truth and prepare the next generation. * What kind of schools will your children attend? * What values will they be taught? * What content are they consuming? * What institutions are you helping to establish? * What are you building today that will serve others tomorrow? We cannot afford to leave the next generation without structures that will help them stand firm in their faith. 📍SPEND TIME WITH GOD, THEN BUILD! 🔥 God’s Word should not only inspire our worship; it should inform what we create, develop and contribute to society. * Let your fellowship with God produce more than personal inspiration. * Allow His Word to shape your ideas, skills, decisions and work. * Build with excellence, wisdom and obedience. * Become equipped to influence the systems and policies that shape society. The Church can be many in number and still lack influence. God wants to raise people who will faithfully represent His Kingdom and contribute meaningfully to their generation.",
+        "series": "Ecclessia",
+        "tags": [],
+        "topics": [
+          "prophecy"
+        ]
+      },
+      {
+        "source": "cci-api",
         "id": "6a3a7a46b41d5fb9cc75d67f",
         "slug": "purpose-of-the-scriptures",
         "title": "Purpose of the Scriptures",
@@ -2266,25 +2306,6 @@
       },
       {
         "source": "cci-api",
-        "id": "695ad425c011182c85832153",
-        "slug": "overture-2025-with-apostle-emmanuel-iren",
-        "title": "OVERTURE 2025 WITH APOSTLE EMMANUEL IREN",
-        "speaker": "Apostle Emmanuel Iren",
-        "date": "2025-12-31",
-        "audioUrl": "https://sermons-cdn.essantra.joincci.org/sermon-assets/overture-2025-with-apostle-emmanuel-iren/overture-2025-with-apostle-emmanuel-iren.mp3",
-        "youtubeUrl": "https://youtu.be/iIrMI1hlzdU?t=11484",
-        "pageUrl": "https://sermons.joincci.org/sermons/overture-2025-with-apostle-emmanuel-iren",
-        "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/overture-2025-with-apostle-emmanuel-iren/overture-2025-with-apostle-emmanuel-iren.jpeg",
-        "duration": "1Hr 28Mins",
-        "description": "📌 No guaranteed strategy makes a year better, except if the Lord wills. We may plan to do this or that, but it is not in a man’s power to direct his own steps. Our lives are ultimately guided and sustained by God. 📌 Trusting in the Lord is a strategy. Psalm 20:7 reminds us that some trust in chariots and horses, but we choose to trust in the name of the Lord our God. Our strength, wisdom, and intelligence alone did not bring us this far but God did. 📌 God’s faithfulness in the past is our conviction for the future. The same God who fed a generation with bread for forty years continues to perform miracles today. 📌 We must build a devotional system that helps us remember God’s goodness, because His goodness is replicable. Creating intentional moments, such as memorials to celebrate what God has done, helps us sustain the miracles He gives. 📌 Ebenezer means “Stone of Help,” and this is God’s word for us in the year 2026. Our help comes from God alone and from no other source. What does Ebenezer represent? • Thanksgiving – Acknowledging all God has done and thanking Him in advance for what He will yet do. • Genuine devotion and repentance – Allowing God to work on our hearts while maintaining a consistent devotional life. • Boundary markers – Making fresh decisions and setting clear boundaries for our consecration. • Prophecy – Just as God spoke to our fathers, beginning with Abraham, His word to us remains sure and eternal.",
-        "series": "EBENEZER",
-        "tags": [],
-        "topics": [
-          "prophecy"
-        ]
-      },
-      {
-        "source": "cci-api",
         "id": "69565eb3c011182c85812fd2",
         "slug": "prophetic-declarations-for-2026---apostle-emmanuel-iren",
         "title": "Prophetic Declarations For 2026 - Apostle Emmanuel Iren",
@@ -2296,6 +2317,25 @@
         "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/prophetic-declarations-for-2026---apostle-emmanuel-iren/prophetic-declarations-for-2026---apostle-emmanuel-iren.jpeg",
         "duration": "5Mins 5Secs",
         "description": "“Then Samuel took a stone and set it between Mizpah and Shen, and called its name Ebenezer, saying, Thus far the Lord has helped us.” — 1 Samuel 7:12 (NKJV) Ebenezer reminds us that our past, present, and future are sustained by God’s unfailing help. 2026 is a year of remembrance, reliance, and confidence in the One who brought us this far. Welcome to 2026 — our year of EBENEZER.",
+        "series": "EBENEZER",
+        "tags": [],
+        "topics": [
+          "prophecy"
+        ]
+      },
+      {
+        "source": "cci-api",
+        "id": "695ad425c011182c85832153",
+        "slug": "overture-2025-with-apostle-emmanuel-iren",
+        "title": "OVERTURE 2025 WITH APOSTLE EMMANUEL IREN",
+        "speaker": "Apostle Emmanuel Iren",
+        "date": "2025-12-31",
+        "audioUrl": "https://sermons-cdn.essantra.joincci.org/sermon-assets/overture-2025-with-apostle-emmanuel-iren/overture-2025-with-apostle-emmanuel-iren.mp3",
+        "youtubeUrl": "https://youtu.be/iIrMI1hlzdU?t=11484",
+        "pageUrl": "https://sermons.joincci.org/sermons/overture-2025-with-apostle-emmanuel-iren",
+        "thumbnail": "https://s3.eu-north-1.amazonaws.com/cci-axios-web-cms-assets//sermon-assets/overture-2025-with-apostle-emmanuel-iren/overture-2025-with-apostle-emmanuel-iren.jpeg",
+        "duration": "1Hr 28Mins",
+        "description": "📌 No guaranteed strategy makes a year better, except if the Lord wills. We may plan to do this or that, but it is not in a man’s power to direct his own steps. Our lives are ultimately guided and sustained by God. 📌 Trusting in the Lord is a strategy. Psalm 20:7 reminds us that some trust in chariots and horses, but we choose to trust in the name of the Lord our God. Our strength, wisdom, and intelligence alone did not bring us this far but God did. 📌 God’s faithfulness in the past is our conviction for the future. The same God who fed a generation with bread for forty years continues to perform miracles today. 📌 We must build a devotional system that helps us remember God’s goodness, because His goodness is replicable. Creating intentional moments, such as memorials to celebrate what God has done, helps us sustain the miracles He gives. 📌 Ebenezer means “Stone of Help,” and this is God’s word for us in the year 2026. Our help comes from God alone and from no other source. What does Ebenezer represent? • Thanksgiving – Acknowledging all God has done and thanking Him in advance for what He will yet do. • Genuine devotion and repentance – Allowing God to work on our hearts while maintaining a consistent devotional life. • Boundary markers – Making fresh decisions and setting clear boundaries for our consecration. • Prophecy – Just as God spoke to our fathers, beginning with Abraham, His word to us remains sure and eternal.",
         "series": "EBENEZER",
         "tags": [],
         "topics": [
