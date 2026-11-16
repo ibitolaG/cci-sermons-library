@@ -2458,6 +2458,28 @@
     "label": "Prophecy & Prophetic Ministry",
     "sermons": [
       {
+        "source": "youtube",
+        "id": "6QajvWNcuuM",
+        "slug": "relive-this-prophecy-from-our-apostle",
+        "title": "Relive This Prophecy From Our Apostle",
+        "rawYtTitle": "RELIVE THIS PROPHECY FROM OUR APOSTLE",
+        "speaker": "Apostle Emmanuel Iren",
+        "date": "2026-11-13",
+        "audioUrl": "",
+        "youtubeUrl": "https://www.youtube.com/watch?v=6QajvWNcuuM",
+        "pageUrl": "https://www.youtube.com/watch?v=6QajvWNcuuM",
+        "thumbnail": "https://i.ytimg.com/vi/6QajvWNcuuM/hqdefault.jpg",
+        "duration": "",
+        "description": "",
+        "series": "Sunday Service",
+        "tags": [
+          "Sunday Service"
+        ],
+        "topics": [
+          "prophecy"
+        ]
+      },
+      {
         "source": "cci-api",
         "id": "6adfaa10bf26e14143e58b4e",
         "slug": "build-the-ark",
